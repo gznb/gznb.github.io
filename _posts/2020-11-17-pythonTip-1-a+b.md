@@ -1,7 +1,7 @@
 ---
 title: pythonTip 1 a+b
 author: gznb
-date: 2020-11-17
+date: 2020-11-17 11:17:01
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true
