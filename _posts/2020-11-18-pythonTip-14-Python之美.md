@@ -1,5 +1,5 @@
 ---
-title: Python之美
+title: pythonTip 14 Python之美
 author: gznb
 date: 2020-11-18 14:24:43
 categories: [ACM, pythonTip]
