@@ -1,7 +1,7 @@
 ---
 title: pythonTip 14 Python之美
 author: gznb
-date: 2020-11-18 14:24:43
+date: 2020-11-18 12:20:44
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true
