@@ -2,7 +2,7 @@
 title: pythonTip 30 National Day
 author: gznb
 date: 2020-12-08 08:32:06
-categories: [python]
+categories: [ACM, pythonTip]
 tags: [简单]
 math: true
 ---
