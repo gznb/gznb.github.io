@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 117 因数（来自2013年ACM-ICPC世界总决赛）
 author: gznb

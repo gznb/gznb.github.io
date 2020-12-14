@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 100 计算GPA
 author: gznb

@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 150 list深度
 author: gznb

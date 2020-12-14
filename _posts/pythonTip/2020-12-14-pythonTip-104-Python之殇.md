@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 104 Python之殇
 author: gznb

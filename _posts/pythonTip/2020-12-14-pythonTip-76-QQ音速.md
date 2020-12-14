@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 76 QQ音速
 author: gznb

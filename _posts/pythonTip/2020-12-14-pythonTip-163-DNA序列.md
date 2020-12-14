@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 163 DNA序列
 author: gznb

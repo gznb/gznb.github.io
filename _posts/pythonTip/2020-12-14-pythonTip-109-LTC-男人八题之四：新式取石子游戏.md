@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 109 LTC-男人八题之四：新式取石子游戏
 author: gznb

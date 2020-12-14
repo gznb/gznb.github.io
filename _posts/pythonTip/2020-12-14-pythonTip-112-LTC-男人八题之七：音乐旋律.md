@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 112 LTC-男人八题之七：音乐旋律
 author: gznb

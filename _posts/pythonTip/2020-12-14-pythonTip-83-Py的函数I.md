@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 83 Py的函数I
 author: gznb

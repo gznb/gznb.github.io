@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 41 Py数
 author: gznb

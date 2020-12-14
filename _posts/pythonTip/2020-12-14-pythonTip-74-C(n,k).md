@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 74 C(n,k)
 author: gznb

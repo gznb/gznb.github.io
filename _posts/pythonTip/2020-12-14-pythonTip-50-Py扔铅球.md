@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 50 Py扔铅球
 author: gznb

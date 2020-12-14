@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 107 LTC-男人八题之二：古老的取石子游戏
 author: gznb

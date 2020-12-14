@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 106 LTC-男人八题之一：连通图
 author: gznb

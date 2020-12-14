@@ -1,4 +1,3 @@
-
 ---
 title: pythonTip 71 回文数 II
 author: gznb
