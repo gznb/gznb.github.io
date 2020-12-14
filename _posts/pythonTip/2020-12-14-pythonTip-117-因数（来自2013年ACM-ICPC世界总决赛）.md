@@ -1,7 +1,7 @@
 ---
 title: pythonTip 117 因数（来自2013年ACM-ICPC世界总决赛）
 author: gznb
-date: 2020-12-14 14:08:24
+date: 2020-12-13 14:08:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

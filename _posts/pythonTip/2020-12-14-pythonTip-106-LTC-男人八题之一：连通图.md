@@ -1,7 +1,7 @@
 ---
 title: pythonTip 106 LTC-男人八题之一：连通图
 author: gznb
-date: 2020-12-14 13:57:24
+date: 2020-12-13 13:57:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

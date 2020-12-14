@@ -1,7 +1,7 @@
 ---
 title: pythonTip 71 回文数 II
 author: gznb
-date: 2020-12-14 13:22:24
+date: 2020-12-13 13:22:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

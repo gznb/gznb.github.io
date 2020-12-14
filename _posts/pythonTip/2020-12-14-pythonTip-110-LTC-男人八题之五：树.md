@@ -1,7 +1,7 @@
 ---
 title: pythonTip 110 LTC-男人八题之五：树
 author: gznb
-date: 2020-12-14 14:01:24
+date: 2020-12-13 14:01:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

@@ -1,7 +1,7 @@
 ---
 title: pythonTip 109 LTC-男人八题之四：新式取石子游戏
 author: gznb
-date: 2020-12-14 14:00:24
+date: 2020-12-13 14:00:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

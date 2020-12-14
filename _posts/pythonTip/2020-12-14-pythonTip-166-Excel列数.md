@@ -1,7 +1,7 @@
 ---
 title: pythonTip 166 Excel列数
 author: gznb
-date: 2020-12-14 14:55:24
+date: 2020-12-13 14:55:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

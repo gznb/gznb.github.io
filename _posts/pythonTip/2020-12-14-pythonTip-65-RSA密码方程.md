@@ -1,7 +1,7 @@
 ---
 title: pythonTip 65 RSA密码方程
 author: gznb
-date: 2020-12-14 13:16:24
+date: 2020-12-13 13:16:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

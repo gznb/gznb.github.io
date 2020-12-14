@@ -1,7 +1,7 @@
 ---
 title: pythonTip 76 QQ音速
 author: gznb
-date: 2020-12-14 13:27:24
+date: 2020-12-13 13:27:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

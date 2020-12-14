@@ -1,7 +1,7 @@
 ---
 title: pythonTip 41 Py数
 author: gznb
-date: 2020-12-14 12:54:24
+date: 2020-12-13 12:54:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

@@ -1,7 +1,7 @@
 ---
 title: pythonTip 100 计算GPA
 author: gznb
-date: 2020-12-14 13:51:24
+date: 2020-12-13 13:51:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true

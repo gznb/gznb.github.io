@@ -1,7 +1,7 @@
 ---
 title: pythonTip 150 list深度
 author: gznb
-date: 2020-12-14 14:39:24
+date: 2020-12-13 14:39:24
 categories: [ACM, pythonTip]
 tags: [简单]
 math: true
