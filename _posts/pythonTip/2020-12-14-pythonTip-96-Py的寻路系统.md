@@ -29,11 +29,69 @@ L = [[1, 2, 1], [2, 3, 1], [1, 3, 1]]
 输出：
 1
 
-
 **分析:**
-稍等片刻。。。。
+
+此题本质是 **单源最短路径问题**。
+
+给出一个简单的思路,使用 Dijkstra 算法。就是从一个顶点（源点）出发到达另一个顶点(终点)的路径可能不止一条,如何找到一条路径使得沿此路径上各边的权值总和(称为路径长度)达到最小。
+
+
+
+定义一个 最小值优先的 优先队列，也就是 值越小就越是排列在前面。
+
+算法步骤：
+
+1. 将所有顶点的价值设置为很大的一个数（假设是无穷大）。
+2. 将源点的价值标记为0， 并且将 源点加入到优先队列中。
+3. 取优先队列队首顶点。遍历和这个顶点相连的所有顶点。
+   1. 如果 从刚刚取到顶点出发，可以更新相邻顶点的价值，则更新顶点的价值，并且将顶点加入到优先队列中
+4. 当优先队列为空时，算法结束。
+
+
+
+
+
+
 
 **代码:**
+
 ```python
-精彩马上继续。。。。。
+from queue import PriorityQueue
+
+pro_que = PriorityQueue()
+
+flag_lst = [0 for _ in  range(n+1)]
+
+# 初始话所有顶点的价值，以及二维表地图的值。
+v_lst = [99999999 if i != s else 0 for i in range(0,n+1)]
+nums = [[99999999 for i in range(n+1)] for j in range(n+1)]
+
+# 将 三元组表示的 顶点和边 转换为 二维表。
+for item in L:
+    x, y, v = item
+    nums[x][y]=nums[y][x] = v
+flag_lst[s] = 1
+
+# 定义一个最小值优先的 优先队列。
+class node:
+    def __init__(self, pos, value):
+        self.pos = pos
+        self.value = value
+    
+    def __lt__(self, other):
+        return self.value < other.value
+
+pro_que.put(node(s, 0))
+
+while not pro_que.empty():
+    now = pro_que.get()
+    pos, value = now.pos, now.value
+    for i in range(1, n+1):
+        # 依次遍历，当两个顶点之间不能相连时或者是两个相同的顶点时 跳过。
+        if i == pos or nums[i][pos] == 99999999:
+            continue
+        if v_lst[i] > value + nums[i][pos]:
+            v_lst[i] = value + nums[i][pos]
+            pro_que.put(node(i, v_lst[i]))
+print(v_lst[t] if v_lst[t]!=99999999 else -1)
 ```
