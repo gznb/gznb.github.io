@@ -25,10 +25,17 @@ year = "0001"
 Oh my god,Not Python Year!
 
 
+
 **分析:**
-稍等片刻。。。。
+这个python 之年的含义就是，判断 给定年份是否为  蛇年？ 而蛇年的循环节是 12。换句话说就是 每12 年一个循环。
+
+
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+python_year = 2013
+
+now_year = int(year)
+
+print("Oh yeah,Python Year!" if not abs(now_year-python_year) % 12 else "Oh my god,Not Python Year!")
 ```
