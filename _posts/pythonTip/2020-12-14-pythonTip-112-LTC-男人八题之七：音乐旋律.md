@@ -25,9 +25,96 @@ L = [25, 27, 30, 34, 39, 45, 52, 60, 69, 79, 69, 60, 52, 45, 39, 34, 30, 26, 22,
 
 
 **分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+def get_suff(strr):
+    suff_lst = []
+    s_len = len(strr)
+    for i in range(s_len):
+        suff_lst.append(strr[i:])
+    return suff_lst
+
+def get_sa_and_rank(suff_lst):
+    suff_dict = dict()
+    step = 0
+    for item in suff_lst:
+        suff_dict[item] = step
+        step += 1
+
+    sa = []
+    rank = []
+
+    suff_order_lst =  sorted(suff_lst)
+
+    # 构造 sa 数组
+    for item in suff_order_lst:
+        sa.append(suff_dict[item])
+
+    # 构造  rank 数组
+    for item in suff_lst:
+        rank.append(suff_order_lst.index(item))
+
+    return sa, rank
+
+def get_height(sa_lst, rank_lst, strr):
+    s_len = len(sa_lst)
+    height_lst = [0 for i in range(s_len)]
+    strr += "0"
+    
+    k = 0
+    for i in range(s_len):
+        k =  k-1 if k else 0
+
+        j = sa_lst[rank_lst[i] - 1]
+
+        while strr[i+k] == strr[j+k]:
+            k += 1
+        height_lst[rank_lst[i]] = k
+    return height_lst
+
+
+def judge(sa_lst, height_lst, k):
+    L = 1
+    while L <= N:
+        R = L
+        mx = mn = sa_lst[L]
+
+        while  R < N and height_lst[R+1] >= k :
+            R += 1
+            mx = max(mx, sa_lst[R])
+            mn = min(mn, sa_lst[R])
+        
+        L = R+1
+        if mx - mn >= k:
+            return True
+    return False
+
+N = len(L)
+
+# if N < 10:
+#     print(0)
+
+strr = "".join([chr(L[i+1] - L[i] + 90) for i in range(N-1)])
+N -= 1
+strr += "X"
+
+suff_lst = get_suff(strr)
+sa_lst, rank_lst = get_sa_and_rank(suff_lst)
+height_lst = get_height(sa_lst, rank_lst, strr)
+
+L, R = 1, N
+
+while L + 1 < R:
+    mid = (L+R) >> 1
+    if judge(sa_lst, height_lst, mid):
+        L = mid
+    else:
+        R = mid
+
+if L < 4:
+    print(0)
+else:
+    print(L+1)
 ```

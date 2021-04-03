@@ -23,10 +23,25 @@ L2 = [2, 1, 1]
 8
 
 
-**分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+v_lst = [0 for i in range(m+1)]
+v_lst[0] = 1
+
+tn = len(L1)
+
+for i in range(tn):
+     p_lst = [0 for i in range(m+1)]
+
+     for j in range(1, m+1):
+        if v_lst[j] or j < L1[i]:
+            continue
+        
+        if v_lst[j-L1[i]] and p_lst[j-L1[i]] < L2[i]:
+            v_lst[j] = 1
+
+            p_lst[j] = p_lst[j-L1[i]] + 1
+print(sum(v_lst)-1)
 ```

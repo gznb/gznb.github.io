@@ -24,9 +24,49 @@ L = [4, 5, 10]
 
 
 **分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+def judge(T):
+    curt, curf = 0, 1
+    
+    for i in L:
+        
+        # 直接从第一层可以走到目标楼层
+        if (i-1) * 20 <= T:
+            continue
+        
+        # 可以 直接从当前楼层 走到目标楼层
+        if curt + abs(curf-i) * 20 <= T:
+            continue
+        # 这个是我们的一个 假定楼层
+        tr = i-1
+        while True:
+            nums = curt + (0 if curf == 1 else 10) + abs(tr-i+1) * 20 + abs(tr-curf+1)*4
+            
+            if nums <= T:
+                tr += 1
+            else:
+                break
+            
+            
+        if tr == i - 1:
+            return False
+        
+        curt = curt + (0 if curf == 1 else 10) + abs(tr-curf) * 4
+        
+        curf = tr
+    return True
+left, right = 0, (L[-1] - 1) * 20
+
+while left  < right:
+    mid = (left+right) >> 1
+    if judge(mid):
+        right = mid
+    else:
+        left = mid + 1
+    
+
+print(right)
 ```

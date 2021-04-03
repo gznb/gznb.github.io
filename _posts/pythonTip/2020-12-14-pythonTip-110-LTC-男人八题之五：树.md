@@ -21,9 +21,42 @@ L = [[1, 2, 3], [1, 3, 1], [1, 4, 2], [3, 5, 1]]
 
 
 **分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+n = 0
+tk = k
+
+for item in L:
+    a, b, c = item
+    n = max(a, b, n)
+graph = [[-1 for i in range(n+1)] for j in range(n+1)]
+
+for item in L:
+    a, b, c = item
+    if graph[a][b] == -1:
+        graph[a][b] = graph[b][a] = c
+    else:
+        graph[a][b] = graph[b][a] = min(graph[a][b], c)
+
+m = 1
+while m:
+    m = 0
+    for i in range(n+1):
+        for j in range(n+1):
+            for k in range(n+1):
+                if graph[i][k] == -1 or graph[k][j] == -1 or i == k or j == k or i == j:
+                    continue
+                if graph[i][j] == -1 or graph[i][j] > graph[i][k] + graph[k][j]:
+                    m += 1
+                    graph[i][j] = graph[j][i] =  max(graph[i][k] + graph[k][j], -1)
+                    
+ans = 0
+for i in range(n + 1):
+    for j in range(i):
+       if graph[i][j] != -1 and graph[i][j] <= tk:
+           ans += 1
+           
+print(ans) 
 ```

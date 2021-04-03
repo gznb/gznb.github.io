@@ -23,9 +23,18 @@ Yes
 
 
 **分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+ans_dict = {}
+
+for item in L:
+    temp = ans_dict.get(item, 0)
+    ans_dict[item] = temp + 1
+
+ans_set = {key for key, value in ans_dict.items() if value % 2}
+
+
+print("Yes" if len(ans_set) else "No")
 ```

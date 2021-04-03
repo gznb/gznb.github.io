@@ -24,9 +24,23 @@ L = [100]
 
 
 **分析:**
-稍等片刻。。。。
+男人八题系列，我基本上都是 将 C++ 代码变换成了 Python 代码，仅供大家参考。
 
 **代码:**
 ```python
-精彩马上继续。。。。。
+len_l = len(L)
+
+nums = [[999999 for i in range(len_l+1)] for j in range(len_l+1)]
+
+for i in range(len_l):
+    nums[i][i] = 0
+
+for i in range(len_l-1, -1, -1):
+    dev = len_l - i
+    for j in range(i+1):
+        x, y = j, j+dev
+        for k in range(x, y):
+            nums[x][y] = min(nums[x][y], nums[x][k]+nums[k+1][y]+sum(L[x:y+1]))
+
+print(nums[0][len_l-1])
 ```
